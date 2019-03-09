@@ -3,30 +3,86 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+	android:background="#E6E6FA"
     android:layout_height="match_parent">
-
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_main" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
-
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="30dp"
+		android:id="@+id/linearLayout1" />
+	<TextView
+		android:text="Conversion App"
+		android:layout_marginLeft="90dp"
+		android:textColor="#B22222"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"
+		android:layout_height="30dp"
+		android:id="@+id/textView1" />
+	<GridLayout
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_marginTop="40dp"
+		android:layout_width="match_parent"
+		android:layout_height="350dp"
+		android:id="@+id/gridLayout1"
+		android:rowCount="3"
+		android:columnCount="2" >
+		<TextView
+			android:text="Input"
+			android:textColor="#8B008B"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:id="@+id/textView2" />
+		<EditText
+			android:inputType="numberDecimal"
+			android:id="@+id/etin" />
+		<TextView
+			android:text="Convert From To"
+			android:textColor="#8B008B"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:id="@+id/textView3" />
+		<RadioGroup
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:id="@+id/radioGroup1">
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#8B0000"
+				android:text="Km-Mile"
+				android:id="@+id/rdKM" />
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#8B0000"
+				android:text="Mile-Km"
+				android:id="@+id/rdMK" />
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#8B0000"
+				android:text="Cm-Inch"
+				android:id="@+id/rdCI" />
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#8B0000"
+				android:text="Inch-Cm"
+				android:id="@+id/rdIC" />
+		</RadioGroup>
+		<TextView
+			android:text="Output"
+			android:textColor="#8B008B"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:id="@+id/textView4" />
+		<EditText
+			android:inputType="numberDecimal"
+			android:id="@+id/etout" />
+		<Button
+			android:text="Convert"
+			android:background="#D8BFD8"
+			android:layout_marginLeft="60dp"
+			android:id="@+id/btConvert" />
+	</GridLayout>
 </android.support.design.widget.CoordinatorLayout>
